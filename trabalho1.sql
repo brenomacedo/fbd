@@ -32,7 +32,8 @@ CREATE TABLE disciplinas (
   codigo INTEGER PRIMARY KEY,
   nome VARCHAR(255) NOT NULL,
   cargaHoraria INTEGER,
-  ementa VARCHAR(255)
+  ementa VARCHAR(255),
+  CONSTRAINT cargaHoraria_intervalo CHECK (cargaHoraria >= 32 AND cargaHoraria <= 128)
 );
 
 -- PROFESSORES
