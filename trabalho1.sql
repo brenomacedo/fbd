@@ -146,7 +146,7 @@ DECLARE
 	quantidadeDisciplinas INTEGER;
 BEGIN
 	SELECT COUNT(*) INTO quantidadeDisciplinas FROM relacao_professores_disciplinas WHERE professorId = profId;
-    RETURN quantidadeDisciplinas > 4;
+    RETURN quantidadeDisciplinas <= 4;
 END;
 $$;
 
