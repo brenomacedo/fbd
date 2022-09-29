@@ -108,7 +108,7 @@ CREATE TABLE relacao_alunos_disciplinas (
   UNIQUE (alunoId, disciplinaId),
   CONSTRAINT fk_aluno FOREIGN KEY (alunoId) REFERENCES alunos ON DELETE CASCADE,
   CONSTRAINT fk_disciplina FOREIGN KEY (disciplinaId) REFERENCES disciplinas ON DELETE CASCADE,
-  avaliacao INTEGER,
+  avaliacao REAL,
   CONSTRAINT avaliacao_intervalo CHECK (avaliacao >= 0 AND avaliacao <= 10)
 );
 
