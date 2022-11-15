@@ -279,7 +279,7 @@ LANGUAGE plpgsql AS
 $$
 BEGIN
 	IF EXISTS (
-      SELECT * FROM cursos WHERE coordenadorId = NEW.coordenadorId
+      SELECT * FROM cursos WHERE coordenadorId = NEW.coordenadorId AND NEW.codigo != cursos.codigo
     ) THEN
     	RAISE EXCEPTION 'O professor que coordena esse curso já coordena outro curso!';
     END IF;
@@ -310,7 +310,7 @@ BEGIN
     END IF;
 
     IF EXISTS (
-      SELECT * FROM centros WHERE diretorId = NEW.diretorId
+      SELECT * FROM centros WHERE diretorId = NEW.diretorId AND NEW.codigo != centros.codigo
     ) THEN
     	RAISE EXCEPTION 'O professor que dirige esse centro já dirige outro centro!';
     END IF;
