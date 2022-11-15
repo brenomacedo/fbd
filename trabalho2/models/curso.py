@@ -14,11 +14,12 @@ class Curso:
         return cursos
 
     def __init__(self, tuple=None):
-        self.codigo = tuple[0]
-        self.nome = tuple[1]
-        self.cargaHoraria = tuple[2]
-        self.coordenadorId = tuple[3]
-        self.centroId = tuple[4]
+        if tuple:
+            self.codigo = tuple[0]
+            self.nome = tuple[1]
+            self.cargaHoraria = tuple[2]
+            self.coordenadorId = tuple[3]
+            self.centroId = tuple[4]
 
     def __str__(self):
         return (

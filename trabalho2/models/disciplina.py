@@ -13,10 +13,11 @@ class Disciplina:
         return disciplinas
 
     def __init__(self, tuple=None):
-        self.codigo = tuple[0]
-        self.nome = tuple[1]
-        self.cargaHoraria = tuple[2]
-        self.ementa = tuple[3]
+        if tuple:
+            self.codigo = tuple[0]
+            self.nome = tuple[1]
+            self.cargaHoraria = tuple[2]
+            self.ementa = tuple[3]
 
     def __str__(self):
         return (

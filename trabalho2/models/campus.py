@@ -14,10 +14,11 @@ class Campus:
 
 
     def __init__(self, tuple=None):
-        self.codigo = tuple[0]
-        self.nome = tuple[1]
-        self.localizacao = tuple[2]
-        self.indicadoPor = tuple[3]
+        if tuple:
+            self.codigo = tuple[0]
+            self.nome = tuple[1]
+            self.localizacao = tuple[2]
+            self.indicadoPor = tuple[3]
 
     def __str__(self):
         return (

@@ -13,10 +13,11 @@ class Centro:
         return centros
 
     def __init__(self, tuple=None):
-        self.codigo = tuple[0]
-        self.nome = tuple[1]
-        self.campusId = tuple[2]
-        self.diretorId = tuple[3]
+        if tuple:
+            self.codigo = tuple[0]
+            self.nome = tuple[1]
+            self.campusId = tuple[2]
+            self.diretorId = tuple[3]
 
     def __str__(self):
         return (

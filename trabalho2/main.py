@@ -1,10 +1,10 @@
 from database.database import databaseConnection
-from models.disciplina import Disciplina
-from repositories.disciplinarepository import DisciplinaRespository
+from models.local import Local
+from repositories.localrepository import LocalRepository
 from datetime import date
 
 def main():
-    disciplinas = DisciplinaRespository().delete(777)
+    locais = LocalRepository().delete(888)
 
 if __name__ == '__main__':
     main()
