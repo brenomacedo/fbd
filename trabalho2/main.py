@@ -1,10 +1,10 @@
 from database.database import databaseConnection
-from models.curso import Curso
-from repositories.cursorepository import CursoRepository
+from models.disciplina import Disciplina
+from repositories.disciplinarepository import DisciplinaRespository
 from datetime import date
 
 def main():
-    cursos = CursoRepository().delete(1111111)
+    disciplinas = DisciplinaRespository().delete(777)
 
 if __name__ == '__main__':
     main()

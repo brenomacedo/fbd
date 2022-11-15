@@ -16,8 +16,10 @@ class Connection:
 
     def __del__(self):
         if self.conn:
-            self.cursor.close()
             self.conn.close()
+
+        if self.cursor:
+            self.cursor.close()
 
     def initDb(self):
         self.conn = connect(host=config['host'], database=config['database'], user=config['user'], password=config['password'])

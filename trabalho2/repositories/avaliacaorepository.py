@@ -3,12 +3,9 @@ sys.path.append("..")
 
 from database.database import databaseConnection
 from models.avaliacao import Avaliacao
+from .repository import Repository
 
-class AvaliacaoRepository:
-    def __init__(self):
-        self.connection = databaseConnection.getConnection()
-        self.cursor = databaseConnection.getCursor()
-
+class AvaliacaoRepository(Repository):
     def create(self, avaliacao: Avaliacao):
         SQL = "INSERT INTO avaliacoes (nota, tipo, alunosTurmasId) VALUES (%s, %s, %s)"
         data = (avaliacao.nota, avaliacao.tipo, avaliacao.alunosTurmasId)

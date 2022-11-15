@@ -3,8 +3,9 @@ sys.path.append("..")
 
 from database.database import databaseConnection
 from models.centro import Centro
+from .repository import Repository
 
-class CentroRepository:
+class CentroRepository(Repository):
     def __init__(self):
         self.connection = databaseConnection.getConnection()
         self.cursor = databaseConnection.getCursor()
