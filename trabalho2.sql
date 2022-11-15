@@ -101,7 +101,7 @@ CREATE TABLE locais (
 
 CREATE TABLE avaliacoes (
   id SERIAL PRIMARY KEY,
-  nota INTEGER NOT NULL,
+  nota REAL NOT NULL,
   tipo TIPO_AVALIACAO NOT NULL,
   CONSTRAINT avaliacao_intervalo CHECK (nota >= 0 AND nota <= 10),
   alunosTurmasId INTEGER NOT NULL
@@ -260,7 +260,7 @@ BEGIN
     IF EXISTS (
       	SELECT * FROM relacao_alunos_turmas
     	INNER JOIN turmas ON turmas.codigo = relacao_alunos_turmas.turmaId
-    	WHERE relacao_alunos_turmas.alunoId = NEW.alunoId AND turmas.disciplina = disciplinaInserida
+    	WHERE relacao_alunos_turmas.alunoId = NEW.alunoId AND turmas.disciplinaId = disciplinaInserida
     ) THEN
     	RAISE EXCEPTION 'Já existe uma turma com essa disciplina';
     END IF;
