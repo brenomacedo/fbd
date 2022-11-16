@@ -1,10 +1,10 @@
 from database.database import databaseConnection
-from models.professor import Professor
-from repositories.professorrepository import ProfessorRepository
+from models.turma import Turma
+from repositories.turmarepository import TurmaRepository
 from datetime import date
 
 def main():
-    professores = ProfessorRepository().delete(11)
+    professores = TurmaRepository().delete(555)
     # for professor in professores:
     #     print(professor)
 
