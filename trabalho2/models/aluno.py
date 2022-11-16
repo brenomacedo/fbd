@@ -4,7 +4,7 @@ class Aluno:
     matricula: int;
     nome: str;
     email: str;
-    nascimento: date;
+    nascimento: str;
     endereco: str;
     sexo: str;
     cursoId: str;
