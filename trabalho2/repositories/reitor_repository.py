@@ -1,7 +1,6 @@
 import sys
 sys.path.append("..")
 
-from database.database import databaseConnection
 from models.reitor import Reitor
 from .repository import Repository
 

@@ -1,7 +1,6 @@
 import sys
 sys.path.append("..")
 
-from database.database import databaseConnection
 from models.avaliacao import Avaliacao
 from .repository import Repository
 

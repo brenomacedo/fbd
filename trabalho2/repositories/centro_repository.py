@@ -1,15 +1,10 @@
 import sys
 sys.path.append("..")
 
-from database.database import databaseConnection
 from models.centro import Centro
 from .repository import Repository
 
 class CentroRepository(Repository):
-    def __init__(self):
-        self.connection = databaseConnection.getConnection()
-        self.cursor = databaseConnection.getCursor()
-
     def create(self, centro: Centro):
         SQL = "INSERT INTO centros (codigo, nome, campusId, diretorId) VALUES (%s, %s, %s, %s)"
         data = (centro.codigo, centro.nome, centro.campusId, centro.diretorId)

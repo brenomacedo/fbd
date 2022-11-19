@@ -1,10 +1,8 @@
-from database.database import databaseConnection
-from models.reitor import Reitor
-from repositories.reitor_repository import ReitorRepository
-from datetime import date
+from models.relacao_cursos_disciplinas import RelacaoCursosDisciplinas
+from repositories.relacao_cursos_disciplinas_repository import RelacaoCursosDisciplinasRepository
 
 def main():
-    professores = ReitorRepository().delete(2)
+    professores = RelacaoCursosDisciplinasRepository().update(RelacaoCursosDisciplinas((5, 3213, 444)))
     # for professor in professores:
     #     print(professor)
 
