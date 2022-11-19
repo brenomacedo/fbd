@@ -16,12 +16,12 @@ class RelacaoTurmasDiasSemana:
         return relacoes
 
     def __init__(self, tuple=None):
-        time().str
         if tuple:
             self.id = tuple[0]
             self.turmaId = tuple[1]
             self.diaSemanaId = tuple[2]
             self.horarioDeInicio = tuple[3].strftime('%H:%M:%S')
+            self.horarioDeTermino = tuple[4].strftime('%H:%M:%S')
 
     def __str__(self):
         return (

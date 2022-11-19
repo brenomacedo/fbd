@@ -4,7 +4,7 @@ sys.path.append("..")
 from models.disciplina import Disciplina
 from .repository import Repository
 
-class DisciplinaRespository(Repository):
+class DisciplinaRepository(Repository):
     def create(self, disciplina: Disciplina):
         SQL = "INSERT INTO disciplinas (codigo, nome, cargaHoraria, ementa) VALUES (%s, %s, %s, %s)"
         data = (disciplina.codigo, disciplina.nome, disciplina.cargaHoraria, disciplina.ementa)

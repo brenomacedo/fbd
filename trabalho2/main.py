@@ -1,10 +1,11 @@
-from models.relacao_cursos_disciplinas import RelacaoCursosDisciplinas
-from repositories.relacao_cursos_disciplinas_repository import RelacaoCursosDisciplinasRepository
+from models.relacao_turmas_dias_semana import RelacaoTurmasDiasSemana
+from repositories.relacao_turmas_dias_semana_repository import RelacaoTurmasDiasSemanaRepository
+from datetime import datetime
 
 def main():
-    professores = RelacaoCursosDisciplinasRepository().update(RelacaoCursosDisciplinas((5, 3213, 444)))
-    # for professor in professores:
-    #     print(professor)
+    professores = RelacaoTurmasDiasSemanaRepository().index()
+    for professor in professores:
+        print(professor)
 
 if __name__ == '__main__':
     main()
