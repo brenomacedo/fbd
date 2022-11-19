@@ -341,10 +341,10 @@ CREATE FUNCTION decrementarAlunosFunc() RETURNS TRIGGER
 LANGUAGE plpgsql AS
 $$
 BEGIN
-	UPDATE turmas SET alunosMatriculados = alunosMatriculados - 1 WHERE turmas.codigo = NEW.turmaId;
+	UPDATE turmas SET alunosMatriculados = alunosMatriculados - 1 WHERE turmas.codigo = OLD.turmaId;
     RETURN NULL;
 END;
 $$;
 
-CREATE TRIGGER decrementarAlunos AFTER INSERT ON relacao_alunos_turmas
+CREATE TRIGGER decrementarAlunos AFTER DELETE ON relacao_alunos_turmas
 FOR EACH ROW EXECUTE FUNCTION decrementarAlunosFunc();
