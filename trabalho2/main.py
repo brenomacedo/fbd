@@ -1,6 +1,6 @@
 from database.database import databaseConnection
 from models.reitor import Reitor
-from repositories.reitorrepository import ReitorRepository
+from repositories.reitor_repository import ReitorRepository
 from datetime import date
 
 def main():
