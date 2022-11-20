@@ -12,7 +12,7 @@ class AvaliacaoController:
     def createAvaliacao(self):
         try:
             nota = float(input('Nota: '))
-            tipo = input('Tipo: ("prova", "avaliacao"): ')
+            tipo = input('Tipo: ("prova", "trabalho"): ')
             alunosTurmasId = int(input('alunosTurmasId: '))
 
             novaAvaliacao = Avaliacao((None, nota, tipo, alunosTurmasId))

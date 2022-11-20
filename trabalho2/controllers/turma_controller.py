@@ -11,7 +11,7 @@ class TurmaController:
 
     def createTurma(self):
         try:
-            codigo = int(input('codigo'))
+            codigo = int(input('codigo: '))
             periodo = input('periodo (XXXX.X - ex: 2022.1): ')
             estado = input('estado ("aberta", "concluida"): ')
             disciplinaId = int(input('disciplinaId: '))
@@ -35,7 +35,7 @@ class TurmaController:
 
     def updateTurma(self):
         try:
-            codigo = int(input('codigo'))
+            codigo = int(input('codigo: '))
             periodo = input('periodo (XXXX.X - ex: 2022.1): ')
             estado = input('estado ("aberta", "concluida"): ')
             disciplinaId = int(input('disciplinaId: '))
@@ -51,7 +51,7 @@ class TurmaController:
 
     def deleteTurma(self):
         try:
-            codigo = int(input('codigo'))
+            codigo = int(input('codigo: '))
             self.turmaRepository.delete(codigo)
             print('Turma deletada!')
         except Exception as erro:
