@@ -12,9 +12,10 @@ class Reitor:
         return reitores
 
     def __init__(self, tuple=None):
-        self.id = tuple[0]
-        self.dataDeAdmissao = tuple[1].strftime('%Y-%m-%d')
-        self.professorId = tuple[2]
+        if tuple:
+            self.id = tuple[0]
+            self.dataDeAdmissao = tuple[1].strftime('%Y-%m-%d')
+            self.professorId = tuple[2]
 
     def __str__(self):
         return (

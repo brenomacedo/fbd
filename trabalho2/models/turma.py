@@ -16,13 +16,14 @@ class Turma:
         return turmas
 
     def __init__(self, tuple=None):
-        self.codigo = tuple[0]
-        self.periodo = tuple[1]
-        self.estado = tuple[2]
-        self.disciplinaId = tuple[3]
-        self.localId = tuple[4]
-        self.alunosMatriculados = tuple[5]
-        self.capacidade = tuple[6]
+        if tuple:
+            self.codigo = tuple[0]
+            self.periodo = tuple[1]
+            self.estado = tuple[2]
+            self.disciplinaId = tuple[3]
+            self.localId = tuple[4]
+            self.alunosMatriculados = tuple[5]
+            self.capacidade = tuple[6]
 
     def __str__(self):
         return (

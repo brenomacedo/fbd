@@ -17,12 +17,13 @@ class Professor:
         return professores
 
     def __init__(self, tuple=None):
-        self.codigo = tuple[0]
-        self.nome = tuple[1]
-        self.email = tuple[2]
-        self.sexo = tuple[3]
-        self.formacao = tuple[4]
-        self.nascimento = tuple[5].strftime('%Y-%m-%d')
+        if tuple:
+            self.codigo = tuple[0]
+            self.nome = tuple[1]
+            self.email = tuple[2]
+            self.sexo = tuple[3]
+            self.formacao = tuple[4]
+            self.nascimento = tuple[5].strftime('%Y-%m-%d')
 
     def __str__(self):
         return (

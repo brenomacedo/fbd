@@ -1,11 +1,7 @@
-from models.relacao_turmas_dias_semana import RelacaoTurmasDiasSemana
-from repositories.relacao_turmas_dias_semana_repository import RelacaoTurmasDiasSemanaRepository
-from datetime import datetime
+from app.app import app
 
 def main():
-    professores = RelacaoTurmasDiasSemanaRepository().index()
-    for professor in professores:
-        print(professor)
+    app()
 
 if __name__ == '__main__':
     main()
